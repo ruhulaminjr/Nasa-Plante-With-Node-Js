@@ -1,0 +1,24 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npm run watch --prefix server",
+    "client": "npm  start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruhulaminjr/Nasa-Plante-With-Node-Js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruhulaminjr/Nasa-Plante-With-Node-Js/issues"
+  },
+  "homepage": "https://github.com/ruhulaminjr/Nasa-Plante-With-Node-Js#readme"
+}

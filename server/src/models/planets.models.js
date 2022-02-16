@@ -43,6 +43,7 @@ function loadPlanets() {
   });
 }
 
+
 module.exports = {
   loadPlanets,
   planets: results,

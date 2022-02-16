@@ -9,5 +9,5 @@ App.use(
     origin: "http://localhost:3000",
   })
 );
-App.use(morgan("combined"));
+// App.use(morgan("combined"));
 module.exports = App;

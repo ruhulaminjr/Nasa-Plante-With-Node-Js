@@ -1,5 +1,5 @@
 const launches = new Map();
-
+let latestFlightNumber = 100;
 const launch = {
   flightNumber: 100,
   mission: "kepler Exploration X",
@@ -11,7 +11,34 @@ const launch = {
   success: true,
 };
 
-launch.destination(launch.flightNumber, launch);
+launches.set(launch.flightNumber, launch);
+function getallLaunches() {
+  return Array.from(launches.values());
+}
+function addLaunches(launch) {
+  latestFlightNumber++;
+  launches.set(
+    latestFlightNumber,
+    Object.assign(launch, {
+      flightNumber: latestFlightNumber,
+      customer: ["Space X", "Nasa"],
+      upcoming: true,
+      success: true,
+    })
+  );
+}
+function existLaunch(launchId) {
+  return launches.has(launchId);
+}
+function abourdedLaunch(id) {
+  const aborded = launches.get(id);
+  aborded.upcoming = false;
+  aborded.success = false;
+  return aborded;
+}
 module.exports = {
-  launches,
+  getallLaunches,
+  addLaunches,
+  existLaunch,
+  abourdedLaunch,
 };

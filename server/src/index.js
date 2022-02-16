@@ -8,8 +8,8 @@ const launchesRouter = require("./controller/routes/launches.router");
 
 const server = http.createServer(app);
 const plantetRouters = require("./controller/routes/planets.router");
-app.use(plantetRouters);
-app.use(launchesRouter);
+app.use("/getplanets", plantetRouters);
+app.use("/getLaunches", launchesRouter);
 app.use(express.static(path.join(__dirname, "..", "public")));
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));

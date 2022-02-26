@@ -21,7 +21,7 @@ function httpAddLaunches(req, res) {
     });
   }
   addLaunches(launch);
-  res.status(201).json(getallLaunches());
+  res.status(201).json(launch);
 }
 function httpAboardLaunches(req, res) {
   console.log(req.params.id);
